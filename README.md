@@ -32,3 +32,7 @@ addpath(genpath('/path/to/Lipid_Phase_Segmentizer/'));
 ## Getting Started: GUI Workflow
 
 This tool is designed to be run as a GUI. Launch the main application script (`Lipid_Phase_Segmentizer.m`) to open the interface.
+
+<p align="center">
+  <img src="https://github.com/christianpaolorichter/Lipid_Phase_Segmentizer/blob/main/GUI.png?raw=true" alt=""/>
+</p>
