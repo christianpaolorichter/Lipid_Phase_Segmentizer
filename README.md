@@ -36,3 +36,13 @@ This tool is designed to be run as a GUI. Launch the main application script (`L
 <p align="center">
   <img src="https://github.com/christianpaolorichter/Lipid_Phase_Segmentizer/blob/main/GUI.png?raw=true" alt=""/>
 </p>
+
+## Performance Evaluation 
+
+<p align="center">
+  <img src="https://github.com/christianpaolorichter/Detection_of_Transient_Imobilization/blob/main/evaluation/toydata_binary_mask.tif?raw=true" alt=""/>
+</p>
+
+<p align="center">
+  <img src="https://github.com/christianpaolorichter/Detection_of_Transient_Imobilization/blob/main/evaluation/comparison_classification.png?raw=true" alt=""/>
+</p>
