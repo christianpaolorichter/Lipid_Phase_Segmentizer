@@ -31,7 +31,7 @@ addpath(genpath('/path/to/Lipid_Phase_Segmentizer/'));
 
 ## Getting Started: GUI Workflow
 
-This tool is designed to be run as a GUI. Launch the main application script (`Lipid_Phase_Segmentizer.m`) to open the interface.
+This tool is designed to be run as a GUI. Launch the main application script (`LipidPhaseSegmentizer.m`) to open the interface.
 
 <p align="center">
   <img src="https://github.com/christianpaolorichter/Lipid_Phase_Segmentizer/blob/main/GUI.png?raw=true" alt=""/>
@@ -42,7 +42,7 @@ The typical workflow is as follows:
 2. Deconvolve Image:
 * Adjust the Point Spread Function (PSF) Width slider. This sets the standard deviation of the Gaussian PSF used for sharpening.
 * Adjust the Regularization slider. This is the gamma parameter ($10^{\text{Gamma}}$) for the Tikhonov deconvolution.
-3. Segment Phases:
+3. Phase Segmentation:
 4. Export: Click the "Export Mask" button. This will open a dialog to select a save location. 
 
 The export saves the following three files in a new subfolder named Lipid Phase Segmentation:
