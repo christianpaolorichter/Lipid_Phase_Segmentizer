@@ -37,6 +37,19 @@ This tool is designed to be run as a GUI. Launch the main application script (`L
   <img src="https://github.com/christianpaolorichter/Lipid_Phase_Segmentizer/blob/main/GUI.png?raw=true" alt=""/>
 </p>
 
+The typical workflow is as follows:
+1. Load Image: Load your source microscopy image (tif-file).
+2. Deconvolve Image:
+* Adjust the Point Spread Function (PSF) Width slider. This sets the standard deviation of the Gaussian PSF used for sharpening.
+* Adjust the Regularization slider. This is the gamma parameter ($10^{\text{Gamma}}$) for the Tikhonov deconvolution.
+3. Segment Phases:
+4. Export: Click the "Export Mask" button. This will open a dialog to select a save location. 
+
+The export saves the following three files in a new subfolder named Lipid Phase Segmentation:
+* Lo-Phase Mask.tif: A binary mask of the $L_o$ phase.
+* Ld-Phase Mask.tif: A binary mask of the $L_d$ phase.
+* Lipid Phase Deconvolution.tif: A 8-bit, normalized ([0 255]) deconvolved image that was used for the segmentation.
+
 ## Performance Evaluation 
 
 <p align="center">
