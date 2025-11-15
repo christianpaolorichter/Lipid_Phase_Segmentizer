@@ -43,7 +43,7 @@ The typical workflow is as follows:
 2. **Deconvolve Image**:
 * Adjust the Point Spread Function (PSF) Width slider. This sets the standard deviation of the Gaussian PSF used for sharpening.
 * Adjust the Regularization slider. This is the gamma parameter ($10^{\text{Gamma}}$) for the Tikhonov deconvolution. Increasing $\text{Gamma}$ increases the smoothing effect and reduces noise, but it sacrifices resolution. Deconvolution formula using the frequency domain:
-$$\text{img}_{\text{deconv}} = \text{real}(\text{ifftn}(\frac{\text{conj}(\text{PSF}_{\text{ft}}) \cdot \text{fftn}(\text{img}_{\text{raw}})}{|\text{PSF}_{\text{ft}}|^2 + \gamma}))$$
+$$\text{img}_{\text{deconv}} = \text{real}\left( \text{ifftn}\left( \frac{\text{conj}(\text{PSF}_{\text{ft}}) \cdot \text{fftn}(\text{img}_{\text{raw}})}{|\text{PSF}_{\text{ft}}|^2 + \gamma} \right) \right)$$
 3. **Phase Segmentation**:
 * Adjust the # Levels slider. This sets the number of distinct intensity thresholds used in the segmentation process.
 * Define which segmented intensity levels correspond to the Liquid-ordered (Lo) and Liquid-disordered (Ld) phases.
