@@ -64,3 +64,7 @@ The export function creates a new subfolder named Lipid Phase Segmentation in yo
 <p align="center">
   <img src="https://github.com/christianpaolorichter/Lipid_Phase_Segmentizer/blob/main/evaluation/comparison_classification.png?raw=true" alt=""/>
 </p>
+
+## Citation
+If you use this software/repository for your research, please cite:
+Richter, C.P (2025). *Lipid Phase Segmentizer* (v1.2.0). [Software]. Available from: https://github.com/christianpaolorichter/Lipid_Phase_Segmentizer
