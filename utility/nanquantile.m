@@ -18,21 +18,49 @@ function q = nanquantile(X,Q)
 %
 %   modified 18.11.2015
 
-% Determine which elements in X are NaN
+% Identify which elements in the input data array X are 'Not a Number' (NaN).
 isNaN = isnan(X);
 
-% Check if any NaN values exist in the array
-if any(isNaN(:))
-    % If NaNs are present:
-    % 1. Filter out NaN values using logical indexing (X(not(isNaN))).
-    % 2. Calculate the quantile(s) using the standard `quantile` function on the remaining valid data.
+% Check if ALL elements in the entire array X are NaN.
+if all(isNaN(:))
+    % If all elements are NaN, the quantile cannot be calculated from data.
+    % The output 'q' is set based on the dimensionality of the requested
+    % probabilities Q, often returning 'inf' or an empty array as a defined
+    % failure condition when no valid data exists.
+
+    % Check if Q is a single scalar probability (e.g., 0.5 for median).
+    if isscalar(Q)
+        % Set the result to 'inf' (infinity) for a single quantile request.
+        q = inf;
+    % Check if Q contains exactly two probability values.
+    elseif numel(Q) == 2
+        % Set the result to [-inf, inf] for a two-element quantile request
+        % (e.g., perhaps minimum and maximum, or 0 and 1 quantiles).
+        q = [-inf,inf];
+    % If Q is neither a scalar nor a two-element array (e.g., empty or >2 elements).
+    else
+        % Set the result to an empty array.
+        q = [];
+    end %if
+
+% Check if ANY elements in the array X are NaN (but not all of them, as handled above).
+elseif any(isNaN(:))
+    % This block executes if there is a mix of valid numbers and NaNs.
+
+    % 1. X(not(isNaN)) extracts all elements from X that are NOT NaN (the valid data).
+    % 2. The standard 'quantile' function is then called on this filtered
+    %    subset of valid data using the specified probabilities Q.
     q = quantile(X(not(isNaN)),Q);
+
+% This block executes if NONE of the elements in the array X are NaN.
 else
-    % If no NaNs are present:
-    % 1. Flatten the array X into a vector X(:).
-    % 2. Convert the data to double precision (ensuring compatibility and preventing issues with integer types).
-    % 3. Calculate the quantile(s) directly.
+    % No NaN values are present, so the standard quantile calculation can be used
+    % on the entire dataset.
+
+    % 1. double(X(:)) ensures the input is a column vector of type double
+    %    (quantile usually operates on columns/vectors and often benefits from
+    %    double precision). X(:) flattens X into a column vector.
+    % 2. The standard 'quantile' function is called.
     q = quantile(double(X(:)),Q);
 end %if
-
 end %fun
