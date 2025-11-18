@@ -38,7 +38,8 @@ This tool is designed to be run as a GUI. Launch the main application script (`L
 </p>
 
 The typical workflow is as follows:
-1. **Load Image**: Load your source microscopy image (tif-file). It is possible to upsample the image for smoother boundaries. 
+1. **Load Image**: 
+* Load your source microscopy image (tif-file). It is possible to upsample the image for smoother boundaries. 
 (If a "Show Boundary" toggle is active, it overlays the phase boundaries on the image.)
 2. **Deconvolve Image**:
 * Adjust the Point Spread Function (PSF) Width slider. This sets the standard deviation of the Gaussian PSF used for sharpening.
@@ -46,9 +47,10 @@ The typical workflow is as follows:
 3. **Phase Segmentation**:
 * Adjust the # Levels slider. This sets the number of distinct intensity thresholds used in the segmentation process.
 * Define which segmented intensity levels correspond to the Liquid-ordered (Lo) and Liquid-disordered (Ld) phases.
-4. **Export**: Click the "Export Mask" button. This will open a dialog to select a save location. 
+4. **Export**: 
+* Click the "Export Mask" button. This will open a dialog to select a save location. 
 
-The export function creates a new subfolder named Lipid Phase Segmentation in your chosen directory. This folder will contain three files:
+The export function creates a new subfolder named "Lipid" Phase Segmentation" in your chosen directory. This folder will contain three files:
 * Lo-Phase Mask.tif: A binary mask of the $L_o$ phase.
 * Ld-Phase Mask.tif: A binary mask of the $L_d$ phase.
 * Lipid Phase Deconvolution.tif: A 8-bit, normalized ([0 255]) deconvolved image that was used for the segmentation.
@@ -67,4 +69,5 @@ The export function creates a new subfolder named Lipid Phase Segmentation in yo
 
 ## Citation
 If you use this software/repository for your research, please cite:
-Richter, C.P (2025). *Lipid Phase Segmentizer* (v1.2.0). [Software]. Available from: https://github.com/christianpaolorichter/Lipid_Phase_Segmentizer
+
+Richter, C.P. (2025). *Lipid Phase Segmentizer* (v1.2.0). [Software]. Available from: https://github.com/christianpaolorichter/Lipid_Phase_Segmentizer
