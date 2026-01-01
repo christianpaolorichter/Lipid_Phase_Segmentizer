@@ -60,11 +60,11 @@ The export function creates a new subfolder named "Lipid" Phase Segmentation" in
 ## Performance Evaluation 
 
 <p align="center">
-  <img src="https://github.com/christianpaolorichter/Lipid_Phase_Segmentizer/blob/main/evaluation/ground_truth.png?raw=true" alt=""/>
+  <img src="https://github.com/christianpaolorichter/Lipid_Phase_Segmentizer/blob/main/evaluation/ground_truth.png?raw=true" width="70%" alt=""/>
 </p>
 
 <p align="center">
-  <img src="https://github.com/christianpaolorichter/Lipid_Phase_Segmentizer/blob/main/evaluation/comparison_classification.png?raw=true" alt=""/>
+  <img src="https://github.com/christianpaolorichter/Lipid_Phase_Segmentizer/blob/main/evaluation/comparison_classification.png?raw=true" width="70%" alt=""/>
 </p>
 
 ## Citation
