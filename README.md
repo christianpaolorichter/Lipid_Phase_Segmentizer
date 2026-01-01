@@ -34,7 +34,7 @@ addpath(genpath('/path/to/Lipid_Phase_Segmentizer/'));
 This tool is designed to be run as a GUI. Launch the main application script (`LipidPhaseSegmentizer.m`) to open the interface. The upper-left panel shows the raw source microscopy image. The upper-right panel shows the deconvolved image. The lower-right panel shows mask panel with the Liquid-ordered (Lo) in red and Liquid-disordered (Ld) phase in green.
 
 <p align="center">
-  <img src="https://github.com/christianpaolorichter/Lipid_Phase_Segmentizer/blob/main/GUI.png?raw=true" width="75%" alt=""/>
+  <img src="https://github.com/christianpaolorichter/media/blob/main/LPS/GUI.png?raw=true" width="75%" alt=""/>
 </p>
 
 The typical workflow is as follows:
@@ -60,11 +60,11 @@ The export function creates a new subfolder named "Lipid" Phase Segmentation" in
 ## Performance Evaluation 
 
 <p align="center">
-  <img src="https://github.com/christianpaolorichter/Lipid_Phase_Segmentizer/blob/main/evaluation/ground_truth.png?raw=true" width="75%" alt=""/>
+  <img src="https://github.com/christianpaolorichter/media/blob/main/LPS/ground_truth.png?raw=true" width="75%" alt=""/>
 </p>
 
 <p align="center">
-  <img src="https://github.com/christianpaolorichter/Lipid_Phase_Segmentizer/blob/main/evaluation/comparison_classification.png?raw=true" width="75%" alt=""/>
+  <img src="https://github.com/christianpaolorichter/media/blob/main/LPS/comparison_classification.png?raw=true" width="75%" alt=""/>
 </p>
 
 ## Citation
